@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>MTop | Modular Vanity Tops — Engineered Marble Vanity Tops</title>
+<title>Modular Vanity Tops — Engineered Marble Vanity Tops</title>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-P1PLNWMB3Y"></script>
 <script>
@@ -12,7 +12,7 @@
   gtag('js', new Date());
   gtag('config', 'G-P1PLNWMB3Y');
 </script>
-<meta name="description" content="MTop / Modular Vanity Tops — engineered cultured marble vanity tops manufactured in Nuevo León, México, exporting to the United States and Canada since 2004.">
+<meta name="description" content="Modular Vanity Tops — engineered cultured marble vanity tops manufactured in Nuevo León, México, exporting to the United States and Canada since 2004.">
 <link rel="icon" href="media/Logo_MVT_B.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -48,6 +48,12 @@ input,select,textarea,button{font-family:inherit;}
 .nav-link{position:relative;}
 .nav-link::after{content:'';position:absolute;left:0;bottom:-6px;width:0;height:1px;background:#fff;transition:width .25s;}
 .nav-link:hover::after{width:100%;}
+.nav-dropdown{position:relative;}
+.dropdown-menu{position:absolute;top:100%;left:50%;transform:translateX(-50%);background:#20180F;border:1px solid rgba(255,255,255,0.14);border-radius:var(--radius);min-width:210px;padding:8px 0;margin-top:14px;opacity:0;visibility:hidden;transition:opacity .18s ease,visibility .18s ease;box-shadow:0 24px 48px rgba(0,0,0,0.35);z-index:150;}
+.nav-dropdown::before{content:'';position:absolute;top:100%;left:0;right:0;height:14px;}
+.nav-dropdown:hover .dropdown-menu{opacity:1;visibility:visible;}
+.dropdown-menu a{display:block;padding:11px 20px;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.78);white-space:nowrap;transition:background .15s,color .15s;}
+.dropdown-menu a:hover{background:rgba(255,255,255,0.08);color:#fff;}
 .mt-btn{transition:all .25s;}
 .mt-btn-solid:hover{background:var(--accent-dark)!important;}
 .mt-btn-ghost:hover{background:rgba(255,255,255,0.12)!important;}
@@ -92,8 +98,15 @@ input,select,textarea,button{font-family:inherit;}
   <nav style="display:flex;align-items:center;gap:clamp(12px,2vw,28px);font-size:12.5px;letter-spacing:0.1em;text-transform:uppercase;font-weight:400;">
     <a href="#nosotros" class="nav-link" style="color:rgba(255,255,255,0.82);">About</a>
     <a href="#calidad" class="nav-link" style="color:rgba(255,255,255,0.82);">Quality</a>
-    <a href="#colecciones" class="nav-link" style="color:rgba(255,255,255,0.82);">Collections</a>
-    <a href="#acabados" class="nav-link" style="color:rgba(255,255,255,0.82);">Finishes</a>
+    <div class="nav-dropdown">
+      <a href="collections.html" class="nav-link" style="color:rgba(255,255,255,0.82);">Collections</a>
+      <div class="dropdown-menu">
+        <a href="family-rectangular.html">Rectangular Family</a>
+        <a href="family-oval.html">Oval Family</a>
+        <a href="family-contemporary.html">Contemporary Family</a>
+      </div>
+    </div>
+    <a href="finishes.html" class="nav-link" style="color:rgba(255,255,255,0.82);">Finishes</a>
     <a href="#certificaciones" class="nav-link" style="color:rgba(255,255,255,0.82);">Certifications</a>
     <a href="#grupo" class="nav-link" style="color:rgba(255,255,255,0.82);">Our Companies</a>
     <a href="#contacto" class="nav-link" style="color:rgba(255,255,255,0.82);">Contact</a>
@@ -106,11 +119,11 @@ input,select,textarea,button{font-family:inherit;}
   <div class="mt-slide active" style="background-image:url('media/top-quality-vanity-top-modular-tops.jpg');">
     <div style="position:relative;z-index:2;max-width:1280px;margin:0 auto;height:100%;display:flex;align-items:center;padding:0 clamp(20px,5vw,64px);">
       <div style="max-width:660px;animation:mtfade 0.9s ease both;">
-        <div style="font-size:12.5px;letter-spacing:0.3em;text-transform:uppercase;color:#E7D2AE;font-weight:500;margin-bottom:22px;">MTop · Engineered Marble Vanity Tops</div>
+        <div style="font-size:12.5px;letter-spacing:0.3em;text-transform:uppercase;color:#E7D2AE;font-weight:500;margin-bottom:22px;">Engineered Marble Vanity Tops</div>
         <h1 style="font-family:'Cormorant Garamond',serif;font-weight:600;color:#fff;font-size:clamp(2.4rem,5.6vw,4.6rem);line-height:1.08;margin:0;">Cultured marble vanity tops, engineered to last.</h1>
         <p style="font-size:clamp(15px,1.15vw,18px);line-height:1.72;color:rgba(255,255,255,0.86);max-width:520px;margin:24px 0 0;font-weight:300;">Fine quality vanity tops for homes, hotels and motels, assisted living retirement centers and multi-family dwellings — exported from México since 2004.</p>
         <div style="display:flex;flex-wrap:wrap;gap:16px;margin-top:36px;">
-          <a href="#colecciones" class="mt-btn mt-btn-solid" style="background:var(--accent);color:#fff;padding:15px 32px;font-size:13px;letter-spacing:0.16em;text-transform:uppercase;font-weight:500;border-radius:var(--radius);">See collections</a>
+          <a href="collections.html" class="mt-btn mt-btn-solid" style="background:var(--accent);color:#fff;padding:15px 32px;font-size:13px;letter-spacing:0.16em;text-transform:uppercase;font-weight:500;border-radius:var(--radius);">See collections</a>
           <a href="#contacto" class="mt-btn mt-btn-ghost" style="border:1px solid rgba(255,255,255,0.55);color:#fff;padding:15px 32px;font-size:13px;letter-spacing:0.16em;text-transform:uppercase;font-weight:400;border-radius:var(--radius);">Request a quote</a>
         </div>
       </div>
@@ -135,7 +148,7 @@ input,select,textarea,button{font-family:inherit;}
         <h1 style="font-family:'Cormorant Garamond',serif;font-weight:600;color:#fff;font-size:clamp(2.4rem,5.6vw,4.6rem);line-height:1.08;margin:0;">Laguna, Luna &amp; Oval collections.</h1>
         <p style="font-size:clamp(15px,1.15vw,18px);line-height:1.72;color:rgba(255,255,255,0.86);max-width:520px;margin:24px 0 0;font-weight:300;">Soft, rounded silhouettes finished from gloss to matte — designed for timeless bathrooms.</p>
         <div style="display:flex;flex-wrap:wrap;gap:16px;margin-top:36px;">
-          <a href="#colecciones" class="mt-btn mt-btn-solid" style="background:var(--accent);color:#fff;padding:15px 32px;font-size:13px;letter-spacing:0.16em;text-transform:uppercase;font-weight:500;border-radius:var(--radius);">Explore the Oval Family</a>
+          <a href="family-oval.html" class="mt-btn mt-btn-solid" style="background:var(--accent);color:#fff;padding:15px 32px;font-size:13px;letter-spacing:0.16em;text-transform:uppercase;font-weight:500;border-radius:var(--radius);">Explore the Oval Family</a>
         </div>
       </div>
     </div>
@@ -186,9 +199,9 @@ input,select,textarea,button{font-family:inherit;}
       <div style="font-size:13px;letter-spacing:0.28em;text-transform:uppercase;color:var(--accent);font-weight:500;">About Us · Beginning</div>
       <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(2rem,4vw,3.2rem);line-height:1.1;margin:18px 0 0;">Since 2004, exporting fine engineered vanity tops.</h2>
       <p style="font-size:clamp(15px,1.1vw,17px);line-height:1.8;color:#5A5340;margin:24px 0 0;font-weight:300;">Since 2004 we have been successfully exporting to the United States and Canada, distributing through Cultured Marble Manufacturers, Building &amp; Plumbing Suppliers, General Contractors and Home Centers.</p>
-      <p style="font-size:clamp(15px,1.1vw,17px);line-height:1.8;color:#5A5340;margin:14px 0 0;font-weight:300;">Our factory is located in Juárez, N.L., 160 miles south from our Distribution Center, conveniently located in Laredo, Texas. We specialize in fine quality Engineered Vanity Tops, designed specifically for homes, hotels and motels, assisted living retirement centers and multi-family dwellings.</p>
+      <p style="font-size:clamp(15px,1.1vw,17px);line-height:1.8;color:#5A5340;margin:14px 0 0;font-weight:300;">Our factory is located in Monterrey, MX, conveniently close to our Distribution Center, located in Laredo, Texas. We specialize in fine quality Engineered Vanity Tops, designed specifically for homes, hotels and motels, assisted living retirement centers and multi-family dwellings.</p>
       <div style="display:flex;flex-wrap:wrap;gap:14px 40px;margin:32px 0 0;">
-        <div><div style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;">Juárez, N.L.</div><div style="font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:#9A9075;margin-top:4px;">Factory</div></div>
+        <div><div style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;">Monterrey, MX</div><div style="font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:#9A9075;margin-top:4px;">Factory</div></div>
         <div><div style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;">Laredo, TX</div><div style="font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:#9A9075;margin-top:4px;">Distribution Center</div></div>
       </div>
       <a href="#calidad" style="display:inline-block;margin-top:36px;border-bottom:1px solid var(--accent);color:var(--accent);padding-bottom:4px;font-size:13px;letter-spacing:0.16em;text-transform:uppercase;font-weight:500;">Learn about our quality →</a>
@@ -206,21 +219,21 @@ input,select,textarea,button{font-family:inherit;}
       <p style="font-size:clamp(15px,1.1vw,17px);line-height:1.78;color:#5A5340;margin:18px 0 0;font-weight:300;">We can create from gloss to matte finishes. All products are individually packaged to provide maximum protection from factory to the final destination. For additional protection, we palletize and band or stretch-wrap all orders.</p>
     </div>
     <div class="mt-stagger" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:28px;margin-top:48px;">
-      <a href="#colecciones" class="app-card" style="display:block;background:var(--stone-mid);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;">
+      <a href="family-rectangular.html" class="app-card" style="display:block;background:var(--stone-mid);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;">
         <div style="aspect-ratio:3/2;overflow:hidden;"><img src="media/rectangulo_family.jpg" alt="Rectangular Family" style="width:100%;height:100%;object-fit:cover;"></div>
         <div style="padding:24px 26px 28px;display:flex;justify-content:space-between;align-items:center;gap:12px;">
           <div><div style="font-family:'Cormorant Garamond',serif;font-size:1.6rem;">Rectangular Family</div><div style="font-size:13px;color:#847A5F;margin-top:6px;font-weight:300;">Valerie, Lavante, Tuscany &amp; Contempo.</div></div>
           <span style="color:var(--accent);font-size:18px;">→</span>
         </div>
       </a>
-      <a href="#colecciones" class="app-card" style="display:block;background:var(--stone-mid);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;">
+      <a href="family-oval.html" class="app-card" style="display:block;background:var(--stone-mid);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;">
         <div style="aspect-ratio:3/2;overflow:hidden;"><img src="media/oval_family.jpg" alt="Oval Family" style="width:100%;height:100%;object-fit:cover;object-position:center 30%;"></div>
         <div style="padding:24px 26px 28px;display:flex;justify-content:space-between;align-items:center;gap:12px;">
           <div><div style="font-family:'Cormorant Garamond',serif;font-size:1.6rem;">Oval Family</div><div style="font-size:13px;color:#847A5F;margin-top:6px;font-weight:300;">Laguna, Flat Oval, Luna &amp; Oval.</div></div>
           <span style="color:var(--accent);font-size:18px;">→</span>
         </div>
       </a>
-      <a href="#colecciones" class="app-card" style="display:block;background:var(--stone-mid);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;">
+      <a href="family-contemporary.html" class="app-card" style="display:block;background:var(--stone-mid);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;">
         <div style="aspect-ratio:3/2;overflow:hidden;"><img src="media/contemporary_family.jpg" alt="Contemporary Family" style="width:100%;height:100%;object-fit:cover;"></div>
         <div style="padding:24px 26px 28px;display:flex;justify-content:space-between;align-items:center;gap:12px;">
           <div><div style="font-family:'Cormorant Garamond',serif;font-size:1.6rem;">Contemporary Family</div><div style="font-size:13px;color:#847A5F;margin-top:6px;font-weight:300;">Cascada, Citlali, Citrino, Vaesa, Lucerna &amp; Sephora.</div></div>
@@ -239,43 +252,12 @@ input,select,textarea,button{font-family:inherit;}
   </div>
 </section>
 
-<!-- COLLECTIONS -->
-<section id="colecciones" style="padding:clamp(64px,9vw,120px) clamp(20px,5vw,64px);">
-  <div style="max-width:1280px;margin:0 auto;">
-    <div style="max-width:640px;">
-      <div style="font-size:13px;letter-spacing:0.28em;text-transform:uppercase;color:var(--accent);font-weight:500;">Collections</div>
-      <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(2rem,4vw,3.2rem);line-height:1.1;margin:18px 0 0;">All products, three design families.</h2>
-      <p style="font-size:clamp(15px,1.1vw,17px);line-height:1.75;color:#5A5340;margin:18px 0 0;font-weight:300;">Filter our sixteen vanity top collections by family — Rectangular, Oval or Contemporary.</p>
-    </div>
-    <div style="display:flex;flex-wrap:wrap;gap:36px;align-items:flex-end;margin:44px 0 34px;">
-      <div>
-        <div style="font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#9A9075;margin-bottom:12px;">Family</div>
-        <div style="display:flex;flex-wrap:wrap;gap:8px;" id="family-filters"></div>
-      </div>
-      <div style="margin-left:auto;font-size:13px;letter-spacing:0.1em;color:#9A9075;" id="coll-count"></div>
-    </div>
-    <div id="coll-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:26px;"></div>
-  </div>
-</section>
-
-<!-- FINISHES / SWATCHES -->
-<section id="acabados" style="padding:clamp(64px,9vw,120px) clamp(20px,5vw,64px);background:#FFFFFF;border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
-  <div style="max-width:1280px;margin:0 auto;">
-    <div style="max-width:640px;">
-      <div style="font-size:13px;letter-spacing:0.28em;text-transform:uppercase;color:var(--accent);font-weight:500;">Finishes</div>
-      <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(2rem,4vw,3.2rem);line-height:1.1;margin:18px 0 0;">A cultured marble tone for every palette.</h2>
-      <p style="font-size:clamp(15px,1.1vw,17px);line-height:1.75;color:#5A5340;margin:18px 0 0;font-weight:300;">Every vanity top can be finished from gloss to matte in the textures below.</p>
-    </div>
-    <div class="mt-stagger" id="swatch-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:22px;margin-top:48px;"></div>
-  </div>
-</section>
-
 <!-- WHY MTOP -->
 <section id="ventajas" style="padding:clamp(64px,9vw,120px) clamp(20px,5vw,64px);">
   <div style="max-width:1280px;margin:0 auto;">
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(36px,5vw,70px);">
       <div>
-        <div style="font-size:13px;letter-spacing:0.28em;text-transform:uppercase;color:var(--accent);font-weight:500;">Why MTop</div>
+        <div style="font-size:13px;letter-spacing:0.28em;text-transform:uppercase;color:var(--accent);font-weight:500;">Why Us</div>
         <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(2rem,4vw,3rem);line-height:1.1;margin:18px 0 0;">Built for homes, hotels and every project.</h2>
         <p style="font-size:clamp(15px,1.1vw,17px);line-height:1.75;color:#5A5340;margin:20px 0 0;font-weight:300;">Engineered cultured marble vanity tops designed specifically for homes, hotels and motels, assisted living retirement centers and multi-family dwellings.</p>
         <div style="margin-top:28px;border-radius:var(--radius);overflow:hidden;aspect-ratio:16/9;">
@@ -347,7 +329,7 @@ input,select,textarea,button{font-family:inherit;}
       <div style="margin-top:38px;display:flex;flex-direction:column;gap:24px;">
         <div>
           <div style="font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:#9A9075;">Factory</div>
-          <div style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;margin-top:6px;">Juárez, Nuevo León, México</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;margin-top:6px;">Monterrey, México</div>
         </div>
         <div>
           <div style="font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:#9A9075;">Distribution Center</div>
@@ -358,13 +340,6 @@ input,select,textarea,button{font-family:inherit;}
           <div style="font-size:15px;margin-top:6px;font-weight:300;line-height:1.7;">
             <a href="mailto:sales1@modular-tops.com" style="color:var(--accent);">sales1@modular-tops.com</a><br>
             <a href="tel:+18665449477" style="color:inherit;">866-544-9477</a> X123
-          </div>
-        </div>
-        <div>
-          <div style="font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:#9A9075;">Customer Service</div>
-          <div style="font-size:15px;margin-top:6px;font-weight:300;line-height:1.7;">
-            <a href="mailto:info@modular-tops.com" style="color:var(--accent);">info@modular-tops.com</a><br>
-            <a href="tel:+18665449477" style="color:inherit;">866-544-9477</a> X153
           </div>
         </div>
         <div><div style="font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:#9A9075;">Hours</div><div style="font-size:15px;margin-top:6px;font-weight:300;">Mon – Fri · 9:00 – 18:00</div></div>
@@ -396,15 +371,15 @@ input,select,textarea,button{font-family:inherit;}
   <div style="max-width:1280px;margin:0 auto;">
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:40px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,0.12);">
       <div style="grid-column:1/-1;max-width:340px;">
-        <img src="media/Logo_MVT_W.png" alt="MTop" style="height:34px;">
-        <p style="font-size:14px;line-height:1.7;margin:20px 0 0;font-weight:300;color:rgba(255,255,255,0.58);">Engineered cultured marble vanity tops manufactured in México. Part of the MTop manufacturing group.</p>
+        <img src="media/Logo_MVT_W.png" alt="Modular Vanity Tops" style="height:34px;">
+        <p style="font-size:14px;line-height:1.7;margin:20px 0 0;font-weight:300;color:rgba(255,255,255,0.58);">Engineered cultured marble vanity tops manufactured in México.</p>
       </div>
       <div>
         <div style="font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:rgba(255,255,255,0.42);margin-bottom:16px;">Families</div>
         <div style="display:flex;flex-direction:column;gap:10px;font-size:14px;font-weight:300;">
-          <a href="#colecciones" style="color:rgba(255,255,255,0.7);">Rectangular</a>
-          <a href="#colecciones" style="color:rgba(255,255,255,0.7);">Oval</a>
-          <a href="#colecciones" style="color:rgba(255,255,255,0.7);">Contemporary</a>
+          <a href="family-rectangular.html" style="color:rgba(255,255,255,0.7);">Rectangular</a>
+          <a href="family-oval.html" style="color:rgba(255,255,255,0.7);">Oval</a>
+          <a href="family-contemporary.html" style="color:rgba(255,255,255,0.7);">Contemporary</a>
         </div>
       </div>
       <div>
@@ -425,25 +400,11 @@ input,select,textarea,button{font-family:inherit;}
       </div>
     </div>
     <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;padding-top:28px;font-size:13px;color:rgba(255,255,255,0.42);font-weight:300;">
-      <div>© 2026 MTop · Modular Vanity Tops. All rights reserved.</div>
-      <div style="display:flex;gap:24px;"><a href="#top">Privacy policy</a><a href="#top">Juárez, N.L., México</a></div>
+      <div>© 2026 Modular Vanity Tops. All rights reserved.</div>
+      <div style="display:flex;gap:24px;"><a href="#top">Privacy policy</a><a href="#top">Monterrey, México</a></div>
     </div>
   </div>
 </footer>
-
-<!-- LIGHTBOX -->
-<div id="lightbox" onclick="closeLightbox()" style="display:none;position:fixed;inset:0;z-index:200;background:rgba(14,10,4,0.92);align-items:center;justify-content:center;padding:20px;animation:mtoverlay .25s ease both;">
-  <div onclick="event.stopPropagation()" style="position:relative;max-width:920px;width:100%;max-height:92vh;display:flex;flex-direction:column;align-items:center;gap:22px;">
-    <button onclick="closeLightbox()" style="position:absolute;top:-48px;right:0;background:none;border:1px solid rgba(255,255,255,0.3);color:#fff;font-size:22px;line-height:1;cursor:pointer;padding:8px 14px;border-radius:var(--radius);">✕</button>
-    <div style="width:100%;display:flex;align-items:center;justify-content:center;max-height:72vh;padding:10px;">
-      <img id="lb-img" alt="" style="max-width:100%;max-height:68vh;object-fit:contain;filter:drop-shadow(0 40px 70px rgba(0,0,0,0.7));border-radius:var(--radius);">
-    </div>
-    <div style="text-align:center;color:#fff;">
-      <div id="lb-name" style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.5rem,3vw,2rem);"></div>
-      <div id="lb-family" style="font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.52);margin-top:8px;"></div>
-    </div>
-  </div>
-</div>
 
 <script>
 // ─── DATA ────────────────────────────────────────────────────────
@@ -465,22 +426,6 @@ var collections = [
   { name:'Vaesa', code:'VA', family:'contemporary', img:'media/vtmin_vaesa.png' },
   { name:'Lucerna', code:'LC', family:'contemporary', img:'media/lucerna_family00.jpg' },
   { name:'Sephora', code:'ZP', family:'contemporary', img:'media/contemporary_family00-1.jpg' }
-];
-
-var famDefs = [['all','All'],['rectangular','Rectangular'],['oval','Oval'],['contemporary','Contemporary']];
-var famLabels = {rectangular:'Rectangular Family',oval:'Oval Family',contemporary:'Contemporary Family'};
-var activeFamily = 'all';
-
-var swatches = [
-  { name:'Solid White', img:'media/Solid_White_Textura_1-480x453-1.png' },
-  { name:'Ivory', img:'media/Ivory_Textura_1-1-480x457-1.png' },
-  { name:'Linen', img:'media/Linen_Textura_1-480x453-1.jpg' },
-  { name:'Light Gray', img:'media/Light_Gray_Textura_1-480x453-1.png' },
-  { name:'Solid Bone', img:'media/Solid_Bone_Textura_1-480x453-1.jpg' },
-  { name:'Cappuccino', img:'media/Capuccino_Textura_1-480x453-1.jpg' },
-  { name:'Crystal Almond', img:'media/Crystal_almond_Textura_1-480x453-1.jpg' },
-  { name:'Firefox Beige', img:'media/Firefox-Beige_Textura_1-480x453-1.png' },
-  { name:'Italian Iced', img:'media/Italian_iced_Textura_1-480x453-1.jpg' }
 ];
 
 // ── HERO SLIDER ──────────────────────────────────────────────────
@@ -509,52 +454,6 @@ function mtGoto(n) {
 function mtSlide(dir) { clearTimeout(mtTimer); mtGoto(mtCurrent + dir); mtAutoplay(); }
 function mtAutoplay() { mtTimer = setTimeout(function(){ mtGoto(mtCurrent + 1); mtAutoplay(); }, 5500); }
 
-// ── COLLECTIONS ──────────────────────────────────────────────────
-function renderCollections() {
-  var famEl = document.getElementById('family-filters');
-  famEl.innerHTML = '';
-  famDefs.forEach(function(d) {
-    var btn = document.createElement('button');
-    btn.className = 'chip ' + (activeFamily === d[0] ? 'chip-active' : 'chip-inactive');
-    btn.textContent = d[1];
-    btn.onclick = function() { activeFamily = d[0]; renderCollections(); };
-    famEl.appendChild(btn);
-  });
-  var filtered = collections.filter(function(c) { return activeFamily === 'all' || c.family === activeFamily; });
-  document.getElementById('coll-count').textContent = filtered.length + ' collections';
-  var grid = document.getElementById('coll-grid');
-  grid.innerHTML = '';
-  filtered.forEach(function(c) {
-    var card = document.createElement('div');
-    card.className = 'coll-card';
-    card.style.cssText = 'position:relative;aspect-ratio:4/5;border-radius:var(--radius);overflow:hidden;cursor:pointer;background:#2B271F;';
-    card.innerHTML = '<img class="coll-img" src="'+c.img+'" alt="'+c.name+' ('+c.code+')" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s;">'
-      + '<div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,16,8,0) 45%,rgba(20,16,8,0.78) 100%);"></div>'
-      + '<div style="position:absolute;left:0;right:0;bottom:0;padding:20px 22px 24px;">'
-      + '<div style="font-size:11px;letter-spacing:0.22em;text-transform:uppercase;color:#E7D2AE;margin-bottom:8px;">'+famLabels[c.family]+'</div>'
-      + '<div style="display:flex;justify-content:space-between;align-items:flex-end;gap:10px;">'
-      + '<div style="font-family:\'Cormorant Garamond\',serif;font-weight:600;color:#fff;font-size:24px;line-height:1.15;">'+c.name+' <span style="color:rgba(255,255,255,0.55);font-size:18px;">('+c.code+')</span></div>'
-      + '<span style="color:#fff;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;white-space:nowrap;border-bottom:1px solid rgba(255,255,255,0.5);padding-bottom:2px;">Details →</span>'
-      + '</div></div>';
-    card.onmouseenter = function(){ card.querySelector('.coll-img').style.transform = 'scale(1.06)'; };
-    card.onmouseleave = function(){ card.querySelector('.coll-img').style.transform = 'scale(1)'; };
-    card.onclick = function() { openLightbox(c); };
-    grid.appendChild(card);
-  });
-}
-
-// ── SWATCHES ─────────────────────────────────────────────────────
-function renderSwatches() {
-  var grid = document.getElementById('swatch-grid');
-  grid.innerHTML = '';
-  swatches.forEach(function(s) {
-    var div = document.createElement('div');
-    div.className = 'swatch';
-    div.innerHTML = '<div style="aspect-ratio:1/1;border-radius:50%;overflow:hidden;border:1px solid var(--line);box-shadow:0 10px 24px rgba(60,48,26,0.10);"><img src="'+s.img+'" alt="'+s.name+'" style="width:100%;height:100%;object-fit:cover;"></div><div style="text-align:center;margin-top:12px;font-size:13px;letter-spacing:0.06em;color:#5A5340;">'+s.name+'</div>';
-    grid.appendChild(div);
-  });
-}
-
 // ── COLLECTION SELECT ────────────────────────────────────────────
 function renderCollSelect() {
   var sel = document.getElementById('coll-select');
@@ -571,22 +470,6 @@ function renderCollSelect() {
   other.textContent = 'Other';
   sel.appendChild(other);
 }
-
-// ── LIGHTBOX ─────────────────────────────────────────────────────
-function openLightbox(c) {
-  document.getElementById('lb-img').src = c.img;
-  document.getElementById('lb-img').alt = c.name;
-  document.getElementById('lb-name').textContent = c.name + ' (' + c.code + ')';
-  document.getElementById('lb-family').textContent = famLabels[c.family];
-  var lb = document.getElementById('lightbox');
-  lb.style.display = 'flex';
-  document.body.style.overflow = 'hidden';
-}
-function closeLightbox() {
-  document.getElementById('lightbox').style.display = 'none';
-  document.body.style.overflow = '';
-}
-document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeLightbox(); });
 
 // ── SMOOTH SCROLL ────────────────────────────────────────────────
 document.querySelectorAll('a[href^="#"]').forEach(function(link) {
@@ -627,8 +510,6 @@ form.addEventListener('submit', async function(e) {
 // ── SCROLL REVEAL ────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', function() {
   mtInit();
-  renderCollections();
-  renderSwatches();
   renderCollSelect();
 
   if (window.matchMedia('(prefers-reduced-motion:reduce)').matches) return;
@@ -653,11 +534,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
   var qualGrid = document.querySelector('#calidad [style*="grid-template-columns:repeat(auto-fit,minmax(280px"]');
   if (qualGrid) { qualGrid.classList.add('mt-stagger'); io.observe(qualGrid); }
-
-  ['coll-grid','swatch-grid'].forEach(function(id) {
-    var el = document.getElementById(id);
-    if (el) { el.classList.add('mt-reveal'); io.observe(el); }
-  });
 
   var certGrid = document.querySelector('#certificaciones [style*="grid-template-columns:repeat(3"]');
   if (certGrid) { certGrid.classList.add('mt-stagger'); io.observe(certGrid); }
