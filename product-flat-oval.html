@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Oval Family | Modular Vanity Tops</title>
+<title>Flat Oval (OW) | Modular Vanity Tops</title>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-P1PLNWMB3Y"></script>
 <script>
@@ -12,7 +12,7 @@
   gtag('js', new Date());
   gtag('config', 'G-P1PLNWMB3Y');
 </script>
-<meta name="description" content="Oval Family — Laguna, Flat Oval, Luna & Oval vanity top collections.">
+<meta name="description" content="Flat Oval (OW) vanity top — real photos, available sizes and measurements.">
 <link rel="icon" href="media/Logo_MVT_B.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,10 +41,16 @@ a{text-decoration:none;color:inherit;}
 .dropdown-menu a:hover{background:rgba(255,255,255,0.08);color:#fff;}
 .mt-btn{transition:all .25s;}
 .mt-btn-solid:hover{background:var(--accent-dark)!important;}
-.coll-card{transition:transform .3s,box-shadow .3s;cursor:pointer;}
-.coll-card:hover{transform:translateY(-6px);box-shadow:0 24px 50px rgba(60,48,26,0.16);}
-.coll-card .coll-img{transition:transform .6s ease;}
-.coll-card:hover .coll-img{transform:scale(1.06);}
+
+.gal-item{border-radius:var(--radius);overflow:hidden;cursor:pointer;background:#fff;border:1px solid var(--line);height:300px;display:flex;align-items:center;justify-content:center;}
+.gal-item img{display:block;transition:transform .5s ease;max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;}
+.gal-item:hover img{transform:scale(1.04);}
+
+table.spec{width:100%;border-collapse:collapse;font-size:14px;}
+table.spec th,table.spec td{padding:14px 16px;text-align:left;border-bottom:1px solid var(--line);}
+table.spec th{font-size:11.5px;letter-spacing:0.1em;text-transform:uppercase;color:#9A9075;font-weight:500;background:var(--stone-mid);}
+table.spec tbody tr:hover{background:var(--stone-mid);}
+table.spec td.num{font-family:'Cormorant Garamond',serif;font-size:16px;}
 </style>
 </head>
 <body>
@@ -58,7 +64,7 @@ a{text-decoration:none;color:inherit;}
     <a href="index.html#nosotros" class="nav-link" style="color:rgba(255,255,255,0.82);">About</a>
     <a href="index.html#calidad" class="nav-link" style="color:rgba(255,255,255,0.82);">Quality</a>
     <div class="nav-dropdown">
-      <a href="collections.html" class="nav-link" style="color:#fff;">Collections</a>
+      <a href="collections.html" class="nav-link" style="color:rgba(255,255,255,0.82);">Collections</a>
       <div class="dropdown-menu">
         <a href="family-rectangular.html">Rectangular Family</a>
         <a href="family-oval.html">Oval Family</a>
@@ -76,15 +82,61 @@ a{text-decoration:none;color:inherit;}
 <!-- PAGE HEADER -->
 <section style="padding:calc(clamp(64px,9vw,120px) + 74px) clamp(20px,5vw,64px) clamp(50px,7vw,80px);background:#20180F;">
   <div style="max-width:1280px;margin:0 auto;color:#fff;">
-    <div style="font-size:13px;letter-spacing:0.28em;text-transform:uppercase;color:#E7D2AE;font-weight:500;"><a href="collections.html" style="color:#E7D2AE;">Collections</a> · Oval Family</div>
-    <h1 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(2.1rem,4.4vw,3.4rem);line-height:1.1;margin:18px 0 0;">Laguna, Flat Oval, Luna &amp; Oval.</h1>
-    <p style="font-size:clamp(15px,1.1vw,17px);line-height:1.75;color:rgba(255,255,255,0.72);margin:18px 0 0;font-weight:300;max-width:620px;">Soft, rounded silhouettes finished from gloss to matte — designed for timeless bathrooms.</p>
+    <div style="font-size:13px;letter-spacing:0.22em;text-transform:uppercase;color:#E7D2AE;font-weight:500;">
+      <a href="collections.html" style="color:#E7D2AE;">Collections</a> ·
+      <a href="family-oval.html" style="color:#E7D2AE;">Oval Family</a> ·
+      Flat Oval
+    </div>
+    <h1 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(2.1rem,4.4vw,3.4rem);line-height:1.1;margin:18px 0 0;">Flat Oval <span style="color:rgba(255,255,255,0.5);font-size:0.6em;">(OW)</span></h1>
+    <p style="font-size:clamp(15px,1.1vw,17px);line-height:1.75;color:rgba(255,255,255,0.72);margin:18px 0 0;font-weight:300;max-width:620px;">A wide, shallow oval basin set flush into a flat apron with a crisp square edge — engineered cultured marble, available in five widths from 19&Prime; to 61&Prime;.</p>
   </div>
 </section>
 
-<!-- GRID -->
-<section style="padding:clamp(64px,9vw,120px) clamp(20px,5vw,64px);">
-  <div id="coll-grid" style="max-width:1280px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:26px;"></div>
+<!-- GALLERY -->
+<section style="padding:clamp(56px,8vw,90px) clamp(20px,5vw,64px) clamp(30px,4vw,40px);">
+  <div style="max-width:1280px;margin:0 auto;">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;">
+      <div class="gal-item" onclick="openLightbox('media/products/flat-oval/flat-oval-top.jpg','Flat Oval — Top View')"><img src="media/products/flat-oval/flat-oval-top.jpg" alt="Flat Oval top view"></div>
+      <div class="gal-item" onclick="openLightbox('media/products/flat-oval/flat-oval-front.jpg','Flat Oval — Front View')"><img src="media/products/flat-oval/flat-oval-front.jpg" alt="Flat Oval front view"></div>
+      <div class="gal-item" onclick="openLightbox('media/products/flat-oval/flat-oval-angle.jpg','Flat Oval — Angle View')"><img src="media/products/flat-oval/flat-oval-angle.jpg" alt="Flat Oval angled view"></div>
+    </div>
+  </div>
+</section>
+
+<!-- SPECS -->
+<section style="padding:clamp(30px,4vw,40px) clamp(20px,5vw,64px) clamp(64px,9vw,120px);">
+  <div style="max-width:1280px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:clamp(36px,5vw,64px);align-items:start;">
+    <div>
+      <div style="font-size:13px;letter-spacing:0.28em;text-transform:uppercase;color:var(--accent);font-weight:500;">Specifications</div>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(1.7rem,3vw,2.3rem);line-height:1.1;margin:16px 0 0;">Available sizes.</h2>
+      <p style="font-size:14.5px;line-height:1.7;color:#5A5340;margin:14px 0 0;font-weight:300;">Same measurements used in our Odoo catalog. Overall size is width × depth; tolerance ±1/4&Prime; on all dimensions.</p>
+      <div style="margin-top:26px;display:flex;flex-direction:column;gap:10px;font-size:13.5px;color:#5A5340;">
+        <div><strong style="color:var(--ink);">Material:</strong> Cultured Marble</div>
+        <div><strong style="color:var(--ink);">Thickness:</strong> 5/16&Prime; – 1/2&Prime;</div>
+        <div><strong style="color:var(--ink);">Faucet holes:</strong> 3 × ø1.25&Prime;, 4&Prime; centers</div>
+        <div><strong style="color:var(--ink);">Drain:</strong> ø3.5&Prime;</div>
+      </div>
+      <div style="margin-top:30px;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);">
+        <img src="media/products/flat-oval/flat-oval-lifestyle.jpg" alt="Flat Oval installed lifestyle photo" style="width:100%;height:auto;display:block;">
+      </div>
+    </div>
+    <div style="overflow-x:auto;">
+      <table class="spec">
+        <thead>
+          <tr><th>SKU</th><th>Width</th><th>Depth</th><th>Side</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="num">OW-1719</td><td class="num">19&Prime;</td><td class="num">17&Prime;</td><td>Center Bowl</td></tr>
+          <tr><td class="num">OW-2225</td><td class="num">25&Prime;</td><td class="num">22&Prime;</td><td>Center Bowl</td></tr>
+          <tr><td class="num">OW-2231</td><td class="num">31&Prime;</td><td class="num">22&Prime;</td><td>Center Bowl</td></tr>
+          <tr><td class="num">OW-2237</td><td class="num">37&Prime;</td><td class="num">22&Prime;</td><td>Center Bowl</td></tr>
+          <tr><td class="num">OW-2249</td><td class="num">49&Prime;</td><td class="num">22&Prime;</td><td>Center Bowl</td></tr>
+          <tr><td class="num">OW-2261</td><td class="num">61&Prime;</td><td class="num">22&Prime;</td><td>Center Bowl</td></tr>
+        </tbody>
+      </table>
+      <a href="index.html#contacto" class="mt-btn mt-btn-solid" style="display:inline-block;margin-top:26px;background:var(--accent);color:#fff;padding:15px 30px;font-size:13px;letter-spacing:0.16em;text-transform:uppercase;font-weight:500;border-radius:var(--radius);">Request a quote</a>
+    </div>
+  </div>
 </section>
 
 <!-- FOOTER -->
@@ -131,51 +183,17 @@ a{text-decoration:none;color:inherit;}
 <div id="lightbox" onclick="closeLightbox()" style="display:none;position:fixed;inset:0;z-index:200;background:rgba(14,10,4,0.92);align-items:center;justify-content:center;padding:20px;animation:mtoverlay .25s ease both;">
   <div onclick="event.stopPropagation()" style="position:relative;max-width:920px;width:100%;max-height:92vh;display:flex;flex-direction:column;align-items:center;gap:22px;">
     <button onclick="closeLightbox()" style="position:absolute;top:-48px;right:0;background:none;border:1px solid rgba(255,255,255,0.3);color:#fff;font-size:22px;line-height:1;cursor:pointer;padding:8px 14px;border-radius:var(--radius);">✕</button>
-    <div style="width:100%;display:flex;align-items:center;justify-content:center;max-height:72vh;padding:10px;">
-      <img id="lb-img" alt="" style="max-width:100%;max-height:68vh;object-fit:contain;filter:drop-shadow(0 40px 70px rgba(0,0,0,0.7));border-radius:var(--radius);">
+    <div style="width:100%;display:flex;align-items:center;justify-content:center;max-height:76vh;padding:10px;">
+      <img id="lb-img" alt="" style="max-width:100%;max-height:72vh;object-fit:contain;filter:drop-shadow(0 40px 70px rgba(0,0,0,0.7));border-radius:var(--radius);">
     </div>
-    <div style="text-align:center;color:#fff;">
-      <div id="lb-name" style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.5rem,3vw,2rem);"></div>
-    </div>
+    <div id="lb-caption" style="text-align:center;color:#fff;font-family:'Cormorant Garamond',serif;font-size:clamp(1.2rem,2.4vw,1.6rem);"></div>
   </div>
 </div>
 
 <script>
-var collections = [
-  { name:'Laguna', code:'LF', img:'media/products/laguna-lf/laguna-lf-top.jpg', page:'product-laguna-lf.html', fit:'contain' },
-  { name:'Laguna', code:'LG', img:'media/products/laguna-lg/laguna-lg-top.jpg', page:'product-laguna-lg.html', fit:'contain' },
-  { name:'Laguna', code:'LH', img:'media/products/laguna-lh/laguna-lh-top.jpg', page:'product-laguna-lh.html', fit:'contain' },
-  { name:'Flat Oval', code:'OW', img:'media/products/flat-oval/flat-oval-top.jpg', page:'product-flat-oval.html', fit:'contain' },
-  { name:'Luna', code:'LU', img:'media/products/luna/luna-top.jpg', page:'product-luna.html', fit:'contain' },
-  { name:'Oval', code:'OH', img:'media/products/oval-oh/oval-oh-top.jpg', page:'product-oval-oh.html', fit:'contain' },
-  { name:'Oval', code:'OV', img:'media/products/oval-ov/oval-ov-top.jpg', page:'product-oval-ov.html', fit:'contain' }
-];
-
-function renderCollections() {
-  var grid = document.getElementById('coll-grid');
-  grid.innerHTML = '';
-  collections.forEach(function(c) {
-    var card = document.createElement('div');
-    card.className = 'coll-card';
-    card.style.cssText = 'position:relative;aspect-ratio:4/5;border-radius:var(--radius);overflow:hidden;cursor:pointer;background:'+(c.fit==='contain'?'#F8F6F2':'#2B271F')+';';
-    card.innerHTML = '<img class="coll-img" src="'+c.img+'" alt="'+c.name+' ('+c.code+')" style="position:absolute;inset:0;width:100%;height:100%;object-fit:'+(c.fit||'cover')+';transition:transform .5s;">'
-      + '<div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,16,8,0) 45%,rgba(20,16,8,0.78) 100%);"></div>'
-      + '<div style="position:absolute;left:0;right:0;bottom:0;padding:20px 22px 24px;">'
-      + '<div style="display:flex;justify-content:space-between;align-items:flex-end;gap:10px;">'
-      + '<div style="font-family:\'Cormorant Garamond\',serif;font-weight:600;color:#fff;font-size:24px;line-height:1.15;">'+c.name+' <span style="color:rgba(255,255,255,0.55);font-size:18px;">('+c.code+')</span></div>'
-      + (c.page ? '<span style="color:#fff;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;white-space:nowrap;border-bottom:1px solid rgba(255,255,255,0.5);padding-bottom:2px;">Details →</span>' : '')
-      + '</div></div>';
-    card.onmouseenter = function(){ card.querySelector('.coll-img').style.transform = 'scale(1.06)'; };
-    card.onmouseleave = function(){ card.querySelector('.coll-img').style.transform = 'scale(1)'; };
-    card.onclick = function() { if (c.page) { window.location.href = c.page; } else { openLightbox(c); } };
-    grid.appendChild(card);
-  });
-}
-
-function openLightbox(c) {
-  document.getElementById('lb-img').src = c.img;
-  document.getElementById('lb-img').alt = c.name;
-  document.getElementById('lb-name').textContent = c.name + ' (' + c.code + ')';
+function openLightbox(src, caption) {
+  document.getElementById('lb-img').src = src;
+  document.getElementById('lb-caption').textContent = caption;
   var lb = document.getElementById('lightbox');
   lb.style.display = 'flex';
   document.body.style.overflow = 'hidden';
@@ -187,14 +205,13 @@ function closeLightbox() {
 document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeLightbox(); });
 
 document.addEventListener('DOMContentLoaded', function() {
-  renderCollections();
   if (window.matchMedia('(prefers-reduced-motion:reduce)').matches) return;
   var io = new IntersectionObserver(function(entries) {
     entries.forEach(function(entry) {
       if (entry.isIntersecting) { entry.target.classList.add('visible'); io.unobserve(entry.target); }
     });
   }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-  document.querySelectorAll('h1').forEach(function(el) { el.classList.add('mt-reveal'); io.observe(el); });
+  document.querySelectorAll('h1,h2').forEach(function(el) { el.classList.add('mt-reveal'); io.observe(el); });
 });
 </script>
 </body>
