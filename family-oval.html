@@ -41,8 +41,8 @@ a{text-decoration:none;color:inherit;}
 .dropdown-menu a:hover{background:rgba(255,255,255,0.08);color:#fff;}
 .mt-btn{transition:all .25s;}
 .mt-btn-solid:hover{background:var(--accent-dark)!important;}
-.coll-card{transition:transform .3s,box-shadow .3s;cursor:pointer;}
-.coll-card:hover{transform:translateY(-6px);box-shadow:0 24px 50px rgba(60,48,26,0.16);}
+.coll-card{transition:transform .3s,box-shadow .3s;cursor:pointer;box-shadow:0 3px 16px rgba(60,48,26,0.07);}
+.coll-card:hover{transform:translateY(-6px);box-shadow:0 26px 46px rgba(60,48,26,0.18);}
 .coll-card .coll-img{transition:transform .6s ease;}
 .coll-card:hover .coll-img{transform:scale(1.06);}
 </style>
@@ -157,14 +157,25 @@ function renderCollections() {
   collections.forEach(function(c) {
     var card = document.createElement('div');
     card.className = 'coll-card';
-    card.style.cssText = 'position:relative;aspect-ratio:4/5;border-radius:var(--radius);overflow:hidden;cursor:pointer;background:'+(c.fit==='contain'?'#F8F6F2':'#2B271F')+';';
-    card.innerHTML = '<img class="coll-img" src="'+c.img+'" alt="'+c.name+' ('+c.code+')" style="position:absolute;inset:0;width:100%;height:100%;object-fit:'+(c.fit||'cover')+';transition:transform .5s;">'
-      + '<div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,16,8,0) '+(c.fit==='contain'?'74%':'45%')+',rgba(20,16,8,'+(c.fit==='contain'?'0.85':'0.78')+') 100%);"></div>'
-      + '<div style="position:absolute;left:0;right:0;bottom:0;padding:20px 22px 24px;">'
-      + '<div style="display:flex;justify-content:space-between;align-items:flex-end;gap:10px;">'
-      + '<div style="font-family:\'Cormorant Garamond\',serif;font-weight:600;color:#fff;font-size:24px;line-height:1.15;">'+c.name+' <span style="color:rgba(255,255,255,0.55);font-size:18px;">('+c.code+')</span></div>'
-      + (c.page ? '<span style="color:#fff;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;white-space:nowrap;border-bottom:1px solid rgba(255,255,255,0.5);padding-bottom:2px;">Details →</span>' : '')
-      + '</div></div>';
+    if (c.fit === 'contain') {
+      card.style.cssText = 'border-radius:var(--radius);overflow:hidden;cursor:pointer;background:#fff;border:1px solid var(--line);display:flex;flex-direction:column;';
+      card.innerHTML = '<div style="aspect-ratio:5/4;background:linear-gradient(160deg,var(--stone-mid),#F3EEE3);display:flex;align-items:center;justify-content:center;padding:9%;overflow:hidden;">'
+        + '<img class="coll-img" src="'+c.img+'" alt="'+c.name+' ('+c.code+')" style="max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;filter:drop-shadow(0 16px 18px rgba(43,39,31,0.18));transition:transform .5s;">'
+        + '</div>'
+        + '<div style="background:#20180F;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;gap:10px;">'
+        + '<div style="font-family:\'Cormorant Garamond\',serif;font-weight:600;color:#fff;font-size:21px;line-height:1.15;">'+c.name+' <span style="color:rgba(255,255,255,0.5);font-size:15px;">('+c.code+')</span></div>'
+        + (c.page ? '<span style="color:#E7D2AE;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;white-space:nowrap;">Details →</span>' : '')
+        + '</div>';
+    } else {
+      card.style.cssText = 'position:relative;aspect-ratio:4/5;border-radius:var(--radius);overflow:hidden;cursor:pointer;background:#2B271F;';
+      card.innerHTML = '<img class="coll-img" src="'+c.img+'" alt="'+c.name+' ('+c.code+')" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s;">'
+        + '<div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,16,8,0) 45%,rgba(20,16,8,0.78) 100%);"></div>'
+        + '<div style="position:absolute;left:0;right:0;bottom:0;padding:20px 22px 24px;">'
+        + '<div style="display:flex;justify-content:space-between;align-items:flex-end;gap:10px;">'
+        + '<div style="font-family:\'Cormorant Garamond\',serif;font-weight:600;color:#fff;font-size:24px;line-height:1.15;">'+c.name+' <span style="color:rgba(255,255,255,0.55);font-size:18px;">('+c.code+')</span></div>'
+        + (c.page ? '<span style="color:#fff;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;white-space:nowrap;border-bottom:1px solid rgba(255,255,255,0.5);padding-bottom:2px;">Details →</span>' : '')
+        + '</div></div>';
+    }
     card.onmouseenter = function(){ card.querySelector('.coll-img').style.transform = 'scale(1.06)'; };
     card.onmouseleave = function(){ card.querySelector('.coll-img').style.transform = 'scale(1)'; };
     card.onclick = function() { if (c.page) { window.location.href = c.page; } else { openLightbox(c); } };
