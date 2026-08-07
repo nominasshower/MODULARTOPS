@@ -55,9 +55,7 @@ a{text-decoration:none;color:inherit;}
     <img src="media/Logo_MVT_W.png" alt="Modular Vanity Tops" style="height:44px;">
   </a>
   <nav style="display:flex;align-items:center;gap:clamp(12px,2vw,28px);font-size:12.5px;letter-spacing:0.1em;text-transform:uppercase;font-weight:400;">
-    <a href="index.html#nosotros" class="nav-link" style="color:rgba(255,255,255,0.82);">About</a>
-    <a href="index.html#calidad" class="nav-link" style="color:rgba(255,255,255,0.82);">Quality</a>
-    <div class="nav-dropdown">
+    <a href="index.html#nosotros" class="nav-link" style="color:rgba(255,255,255,0.82);">About</a>    <div class="nav-dropdown">
       <a href="collections.html" class="nav-link" style="color:#fff;">Collections</a>
       <div class="dropdown-menu">
         <a href="family-rectangular.html">Rectangular Family</a>
@@ -142,13 +140,13 @@ a{text-decoration:none;color:inherit;}
 
 <script>
 var collections = [
-  { name:'Laguna', code:'LF', img:'media/products/laguna-lf/laguna-lf-top.jpg', page:'product-laguna-lf.html', fit:'contain' },
-  { name:'Laguna', code:'LG', img:'media/products/laguna-lg/laguna-lg-top.jpg', page:'product-laguna-lg.html', fit:'contain' },
-  { name:'Laguna', code:'LH', img:'media/products/laguna-lh/laguna-lh-top.jpg', page:'product-laguna-lh.html', fit:'contain' },
-  { name:'Flat Oval', code:'OW', img:'media/products/flat-oval/flat-oval-top.jpg', page:'product-flat-oval.html', fit:'contain' },
-  { name:'Luna', code:'LU', img:'media/products/luna/luna-top.jpg', page:'product-luna.html', fit:'contain' },
-  { name:'Oval', code:'OH', img:'media/products/oval-oh/oval-oh-top.jpg', page:'product-oval-oh.html', fit:'contain' },
-  { name:'Oval', code:'OV', img:'media/products/oval-ov/oval-ov-top.jpg', page:'product-oval-ov.html', fit:'contain' }
+  { name:'Laguna', code:'LF', img:'media/products/laguna-lf/laguna-lf-angle.jpg', page:'product-laguna-lf.html', fit:'contain' },
+  { name:'Laguna', code:'LG', img:'media/products/laguna-lg/laguna-lg-angle.jpg', page:'product-laguna-lg.html', fit:'contain' },
+  { name:'Laguna', code:'LH', img:'media/products/laguna-lh/laguna-lh-angle.jpg', page:'product-laguna-lh.html', fit:'contain' },
+  { name:'Flat Oval', code:'OW', img:'media/products/flat-oval/flat-oval-angle.jpg', page:'product-flat-oval.html', fit:'contain' },
+  { name:'Luna', code:'LU', img:'media/products/luna/luna-angle.jpg', page:'product-luna.html', fit:'contain' },
+  { name:'Oval', code:'OH', img:'media/products/oval-oh/oval-oh-angle.jpg', page:'product-oval-oh.html', fit:'contain' },
+  { name:'Oval', code:'OV', img:'media/products/oval-ov/oval-ov-angle.jpg', page:'product-oval-ov.html', fit:'contain' }
 ];
 
 function renderCollections() {
@@ -159,7 +157,7 @@ function renderCollections() {
     card.className = 'coll-card';
     if (c.fit === 'contain') {
       card.style.cssText = 'border-radius:var(--radius);overflow:hidden;cursor:pointer;background:#fff;border:1px solid var(--line);display:flex;flex-direction:column;';
-      card.innerHTML = '<div style="aspect-ratio:5/4;background:linear-gradient(160deg,var(--stone-mid),#F3EEE3);display:flex;align-items:center;justify-content:center;padding:9%;overflow:hidden;">'
+      card.innerHTML = '<div style="aspect-ratio:5/4;background:#fff;display:flex;align-items:center;justify-content:center;padding:6%;overflow:hidden;">'
         + '<img class="coll-img" src="'+c.img+'" alt="'+c.name+' ('+c.code+')" style="max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;filter:drop-shadow(0 16px 18px rgba(43,39,31,0.18));transition:transform .5s;">'
         + '</div>'
         + '<div style="background:#20180F;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;gap:10px;">'

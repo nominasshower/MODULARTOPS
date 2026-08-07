@@ -55,9 +55,7 @@ a{text-decoration:none;color:inherit;}
     <img src="media/Logo_MVT_W.png" alt="Modular Vanity Tops" style="height:44px;">
   </a>
   <nav style="display:flex;align-items:center;gap:clamp(12px,2vw,28px);font-size:12.5px;letter-spacing:0.1em;text-transform:uppercase;font-weight:400;">
-    <a href="index.html#nosotros" class="nav-link" style="color:rgba(255,255,255,0.82);">About</a>
-    <a href="index.html#calidad" class="nav-link" style="color:rgba(255,255,255,0.82);">Quality</a>
-    <div class="nav-dropdown">
+    <a href="index.html#nosotros" class="nav-link" style="color:rgba(255,255,255,0.82);">About</a>    <div class="nav-dropdown">
       <a href="collections.html" class="nav-link" style="color:#fff;">Collections</a>
       <div class="dropdown-menu">
         <a href="family-rectangular.html">Rectangular Family</a>
@@ -142,9 +140,9 @@ a{text-decoration:none;color:inherit;}
 
 <script>
 var collections = [
-  { name:'Cascada', code:'CD', img:'media/products/cascada/cascada-top.jpg', page:'product-cascada.html', fit:'contain' },
-  { name:'Citlali', code:'CT', img:'media/products/citlali/citlali-top.jpg', page:'product-citlali.html', fit:'contain' },
-  { name:'Citrino', code:'CI', img:'media/products/citrino/citrino-top.jpg', page:'product-citrino.html', fit:'contain' },
+  { name:'Cascada', code:'CD', img:'media/products/cascada/cascada-angle.jpg', page:'product-cascada.html', fit:'contain' },
+  { name:'Citlali', code:'CT', img:'media/products/citlali/citlali-angle.jpg', page:'product-citlali.html', fit:'contain' },
+  { name:'Citrino', code:'CI', img:'media/products/citrino/citrino-angle.jpg', page:'product-citrino.html', fit:'contain' },
   { name:'Vaesa', code:'VA', img:'media/products/vaesa/vaesa-top.jpg', page:'product-vaesa.html', fit:'contain' },
   { name:'Lucerna', code:'LC', img:'media/products/lucerna/lucerna-top.jpg', page:'product-lucerna.html', fit:'contain' },
   { name:'Sephora', code:'ZP', img:'media/products/sephora/sephora-top.jpg', page:'product-sephora.html', fit:'contain' }
@@ -158,7 +156,7 @@ function renderCollections() {
     card.className = 'coll-card';
     if (c.fit === 'contain') {
       card.style.cssText = 'border-radius:var(--radius);overflow:hidden;cursor:pointer;background:#fff;border:1px solid var(--line);display:flex;flex-direction:column;';
-      card.innerHTML = '<div style="aspect-ratio:5/4;background:linear-gradient(160deg,var(--stone-mid),#F3EEE3);display:flex;align-items:center;justify-content:center;padding:9%;overflow:hidden;">'
+      card.innerHTML = '<div style="aspect-ratio:5/4;background:#fff;display:flex;align-items:center;justify-content:center;padding:6%;overflow:hidden;">'
         + '<img class="coll-img" src="'+c.img+'" alt="'+c.name+' ('+c.code+')" style="max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;filter:drop-shadow(0 16px 18px rgba(43,39,31,0.18));transition:transform .5s;">'
         + '</div>'
         + '<div style="background:#20180F;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;gap:10px;">'
